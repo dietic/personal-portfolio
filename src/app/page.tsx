@@ -1,15 +1,9 @@
-import Image from 'next/image'
+import Hero from '@/components/blocks/hero'
 
 export default function Home() {
   return (
-    <div className="w-svw h-svh flex items-center justify-center flex-col">
-      <h1>H1</h1>
-      <h2>H2</h2>
-      <h3>H3</h3>
-      <h4>H4</h4>
-      <h5>H5</h5>
-      <h6>H6</h6>
-      <p>P</p>
+    <div className="w-svw h-svh flex pt-[68px] justify-center px-16 md:px-32 max-w-[1400px] mx-auto">
+      <Hero />
     </div>
   )
 }
