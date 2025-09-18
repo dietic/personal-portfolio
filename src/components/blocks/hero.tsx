@@ -14,7 +14,7 @@ export default function Hero() {
   ]
 
   return (
-    <div className="w-full py-8">
+    <div className="w-full py-10">
       <h4 className="text-secondary mb-4">Hi, my name is</h4>
       <h1 className="text-4xl text-white font-bold">Diego Rios. </h1>
       <h1 className="text-4xl text-primary font-bold">Frontend Engineer</h1>
@@ -41,8 +41,16 @@ export default function Hero() {
       <Button variant="outline" size="lg" className="mt-4 w-full">
         Get in touch <Mail />
       </Button>
-      <div className="mt-8">
-        <Image src={profile} alt="diego-profile"></Image>
+      <div className="mt-8 relative">
+        <Image
+          className="rounded-md z-40 relative"
+          src={profile}
+          alt="diego-profile"
+        ></Image>
+        <div className="absolute z-10 top-0 left-0 rotate-6 h-full w-full rounded-md bg-linear-to-br from-secondary/20 to-primary/20"></div>
+      </div>
+      <div className="my-12 w-full">
+        <ArrowDown className="mx-auto animate-bounce cursor-pointer" />
       </div>
     </div>
   )
