@@ -1,9 +1,10 @@
 import { MapPin } from 'lucide-react'
-import { Card, CardContent } from '../ui/card'
+import { Card, CardContent } from '../../ui/card'
 import Image from 'next/image'
+import { TechStack } from './aboutme.interface'
 
 export default function AboutMe() {
-  const techStack = [
+  const techStack: TechStack[] = [
     {
       id: 'angular',
       label: 'Angular',

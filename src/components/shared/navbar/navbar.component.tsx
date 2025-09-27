@@ -7,13 +7,14 @@ import { cn } from '@/lib/utils'
 import { Menu } from 'lucide-react'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { NavItem } from './navbar.interface'
 
 export default function Navbar() {
   const scrollY = useScrollY()
   const scrolled = scrollY > 0
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
 
-  const navItems = [
+  const navItems: NavItem[] = [
     {
       id: 'home',
       label: 'Home',
@@ -47,7 +48,7 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 w-full flex justify-center">
+    <nav className="fixed top-0 left-0 w-full flex justify-center z-50">
       <div
         className={cn(
           'flex w-full max-w-[1400px] justify-between items-center py-4 px-16 md:px-32 bg-transparent relative',

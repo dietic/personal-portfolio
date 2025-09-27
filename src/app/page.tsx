@@ -1,4 +1,4 @@
-import AboutMe from '@/components/blocks/aboutMe'
+import AboutMe from '@/components/blocks/aboutMe/aboutme.component'
 import Hero from '@/components/blocks/hero'
 
 export default function Home() {
