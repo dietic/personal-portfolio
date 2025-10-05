@@ -2,6 +2,7 @@ import { MapPin } from 'lucide-react'
 import { Card, CardContent } from '../../ui/card'
 import Image from 'next/image'
 import { TechStack } from './aboutme.interface'
+import LandingSection from '@/components/custom/landingSection.component'
 
 export default function AboutMe() {
   const techStack: TechStack[] = [
@@ -24,11 +25,13 @@ export default function AboutMe() {
       src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/storybook/storybook-original.svg',
     },
   ]
+
   return (
-    <div className="text-center">
+    <LandingSection>
       <h1 className="font-medium text-4xl text-white">
         About <span className="text-primary">Me</span>
       </h1>
+
       <p>
         Passionate about creating digital experiences that make a difference
       </p>
@@ -81,6 +84,25 @@ export default function AboutMe() {
             </div>
           ))}
       </div>
-    </div>
+      <Card className="bg-gradient-to-r from-background/5 to-secondary/5 mt-8 py-8">
+        <h2 className="text-xl font-medium text-white text-center">
+          What I bring to the table
+        </h2>
+        <div className="flex flex-col gap-8 pt-6">
+          <div className="text-center">
+            <h4 className="text-3xl font-medium text-primary">4+</h4>
+            <span className="text-gray-600 text-sm">years of experience</span>
+          </div>
+          <div className="text-center">
+            <h4 className="text-3xl font-medium text-secondary">Frontend</h4>
+            <span className="text-gray-600 text-sm">specialized focus</span>
+          </div>
+          <div className="text-center">
+            <h4 className="text-3xl font-medium text-primary">UX/UI</h4>
+            <span className="text-gray-600 text-sm">growing expertise</span>
+          </div>
+        </div>
+      </Card>
+    </LandingSection>
   )
 }

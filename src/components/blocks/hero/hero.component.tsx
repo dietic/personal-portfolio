@@ -1,8 +1,11 @@
+'use client'
 import { ArrowDown, Mail } from 'lucide-react'
-import { Badge } from '../ui/badge'
-import { Button } from '../ui/button'
-import profile from '../.././../public/diego-office.png'
+import { Badge } from '../../ui/badge'
+import { Button } from '../../ui/button'
+import profile from '../../../../public/diego-office.png'
 import Image from 'next/image'
+import LandingSection from '@/components/custom/landingSection.component'
+import { motion } from 'framer-motion'
 export default function Hero() {
   const technologies = [
     { id: 'react', label: 'React' },
@@ -14,7 +17,7 @@ export default function Hero() {
   ]
 
   return (
-    <div className="w-full py-10">
+    <LandingSection className="w-full py-10">
       <h4 className="text-secondary mb-4">Hi, my name is</h4>
       <h1 className="text-4xl text-white font-bold">Diego Rios. </h1>
       <h1 className="text-4xl text-primary font-bold">Frontend Engineer</h1>
@@ -47,11 +50,15 @@ export default function Hero() {
           src={profile}
           alt="diego-profile"
         ></Image>
-        <div className="absolute z-10 top-0 left-0 rotate-6 h-full w-full rounded-md bg-linear-to-br from-secondary/20 to-primary/20"></div>
+        <motion.div
+          initial={{ rotate: 0 }}
+          animate={{ rotate: 5, transition: { duration: 1 } }}
+          className="absolute z-10 top-0 left-0  h-full w-full rounded-md bg-linear-to-br from-secondary/20 to-primary/20"
+        ></motion.div>
       </div>
       <div className="my-12 w-full">
         <ArrowDown className="mx-auto animate-bounce cursor-pointer" />
       </div>
-    </div>
+    </LandingSection>
   )
 }
