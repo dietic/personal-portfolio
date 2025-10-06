@@ -1,5 +1,6 @@
 import AboutMe from '@/components/blocks/aboutMe/aboutme.component'
 import Hero from '@/components/blocks/hero/hero.component'
+import Projects from '@/components/blocks/projects/projects.component'
 import TechStack from '@/components/blocks/techStack/techstack.component'
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <AboutMe />
       <TechStack />
+      <Projects />
     </div>
   )
 }

@@ -31,7 +31,6 @@ export default function AboutMe() {
       <h1 className="font-medium text-4xl text-white">
         About <span className="text-primary">Me</span>
       </h1>
-
       <p>
         Passionate about creating digital experiences that make a difference
       </p>
