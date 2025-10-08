@@ -1,51 +1,76 @@
 'use client'
-import Link from 'next/link'
-import Image from 'next/image'
-import logoDark from '../../../../public/logo-3.png'
 import { useScrollY } from '@/hooks/useScrollY'
 import { cn } from '@/lib/utils'
+import { AnimatePresence, motion } from 'framer-motion'
 import { Menu } from 'lucide-react'
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useEffect, useState } from 'react'
+import logoDark from '../../../../public/logo-3.png'
 import { NavItem } from './navbar.interface'
 
 export default function Navbar() {
   const scrollY = useScrollY()
   const scrolled = scrollY > 0
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('home')
 
   const navItems: NavItem[] = [
     {
       id: 'home',
       label: 'Home',
-      href: '#',
-      active: true,
+      href: '#home',
+      active: activeSection === 'home',
     },
     {
       id: 'about',
       label: 'About',
-      href: '#',
-      active: false,
+      href: '#about',
+      active: activeSection === 'about',
     },
     {
       id: 'skills',
       label: 'Skills',
-      href: '#',
-      active: false,
+      href: '#skills',
+      active: activeSection === 'skills',
     },
     {
       id: 'projects',
       label: 'Projects',
-      href: '#',
-      active: false,
+      href: '#projects',
+      active: activeSection === 'projects',
     },
     {
       id: 'contact',
       label: 'Contact',
-      href: '#',
-      active: false,
+      href: '#contact',
+      active: activeSection === 'contact',
     },
   ]
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'about', 'skills', 'projects', 'contact']
+      const scrollPosition = window.scrollY + 100 // Offset for navbar height
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i])
+        if (section && scrollPosition >= section.offsetTop) {
+          setActiveSection(sections[i])
+          break
+        }
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    handleScroll() // Call once to set initial state
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const handleLinkClick = () => {
+    setMobileNavOpen(false)
+  }
 
   return (
     <nav className="fixed top-0 left-0 w-full flex justify-center z-50">
@@ -75,9 +100,10 @@ export default function Navbar() {
               <Link
                 href={item.href}
                 key={item.id}
+                onClick={handleLinkClick}
                 className={cn(
                   item.active ? 'text-primary font-medium' : '',
-                  'hover:text-primary',
+                  'hover:text-primary transition-colors duration-200',
                 )}
               >
                 {item.label}
@@ -97,11 +123,17 @@ export default function Navbar() {
           >
             {navItems?.length > 0 &&
               navItems?.map((item) => (
-                <li
-                  key={item.id}
-                  className="py-2 px-4 hover:bg-foreground/20 hover:text-white rounded-md cursor-pointer"
-                >
-                  {item.label}
+                <li key={item.id}>
+                  <Link
+                    href={item.href}
+                    onClick={handleLinkClick}
+                    className={cn(
+                      'block py-2 px-4 hover:bg-foreground/20 hover:text-white rounded-md cursor-pointer transition-colors duration-200',
+                      item.active ? 'text-primary font-medium' : '',
+                    )}
+                  >
+                    {item.label}
+                  </Link>
                 </li>
               ))}
           </motion.ul>
