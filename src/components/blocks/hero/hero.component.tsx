@@ -6,7 +6,9 @@ import profile from '../../../../public/diego-office.png'
 import Image from 'next/image'
 import LandingSection from '@/components/custom/landingSection.component'
 import { motion } from 'framer-motion'
+import { useScrollToSection } from '@/hooks/useScrollToSection'
 export default function Hero() {
+  const scrollTo = useScrollToSection()
   const technologies = [
     { id: 'react', label: 'React' },
     { id: 'next', label: 'Next.js' },
@@ -45,6 +47,7 @@ export default function Hero() {
               variant="secondary"
               size="lg"
               className="mt-4 w-full sm:w-auto"
+              onClick={() => scrollTo('projects')}
             >
               View my work <ArrowDown />
             </Button>
@@ -52,6 +55,7 @@ export default function Hero() {
               variant="outline"
               size="lg"
               className="mt-4 w-full sm:w-auto"
+              onClick={() => scrollTo('contact')}
             >
               Get in touch <Mail />
             </Button>
@@ -74,7 +78,10 @@ export default function Hero() {
       </div>
 
       <div className="my-12 w-full">
-        <ArrowDown className="mx-auto animate-bounce cursor-pointer" />
+        <ArrowDown
+          className="mx-auto animate-bounce cursor-pointer"
+          onClick={() => scrollTo('about')}
+        />
       </div>
     </LandingSection>
   )
