@@ -13,6 +13,12 @@ const rubik = Rubik({
 export const metadata: Metadata = {
   title: 'Diego Rios',
   description: "Diego Rios's portfolio",
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://diegohq.dev',
+    siteName: 'DiegoHQ',
+  },
 }
 
 export const viewport: Viewport = {
