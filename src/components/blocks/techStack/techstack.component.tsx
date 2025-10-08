@@ -1,11 +1,11 @@
 'use client'
 import LandingSection from '@/components/custom/landingSection.component'
 import { Card } from '@/components/ui/card'
+import { cn } from '@/lib/utils'
+import { motion } from 'framer-motion'
 import { Calendar, CheckCircle } from 'lucide-react'
 import { DynamicIcon } from 'lucide-react/dynamic'
 import { Tech } from './techstack.interface'
-import { cn } from '@/lib/utils'
-import { motion } from 'framer-motion'
 export default function TechStack() {
   const techStacks: Tech[] = [
     {
@@ -171,14 +171,14 @@ export default function TechStack() {
         Tech <span className="text-primary">Stack</span>
       </h1>
       <p>Deep expertise in modern technologies with real-world applications</p>
-      <div className="flex flex-col gap-4 mt-8">
+      <div className="flex flex-col gap-4 mt-8 lg:flex-row md:flex-wrap">
         {techStacks?.length > 0 &&
           techStacks?.map((stack) => (
             <Card
-              className="bg-gray-500/5 px-6 py-8 flex flex-col gap-4"
+              className="bg-gray-500/5 px-6 py-8 flex flex-col lg:flex-1 lg:min-w-0 lg:basis-[calc(50%-0.5rem)]"
               key={stack.type}
             >
-              <div className="flex gap-4 items-center">
+              <div className="flex gap-4 items-center mb-4">
                 <div className="bg-background/80 text-primary flex items-center justify-center p-2 rounded-md">
                   {/* <CodeXml size={16} /> */}
                   <DynamicIcon name={stack.icon} size={16} />
