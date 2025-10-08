@@ -1,4 +1,4 @@
-import { MapPin } from 'lucide-react'
+import { Code, MapPin } from 'lucide-react'
 import { Card, CardContent } from '../../ui/card'
 import Image from 'next/image'
 import { TechStack } from './aboutme.interface'
@@ -49,28 +49,31 @@ export default function AboutMe() {
         in writing clean, maintainable code and staying up-to-date with the
         latest technologies and best practices.
       </p>
-      <Card className="mt-8 flex items-center">
-        <CardContent className="flex items-center w-full py-4 gap-4">
-          <div className="p-2 bg-primary/20 rounded-full text-primary">
-            <MapPin height="20" width="20" />
-          </div>
-          <div>
-            <p className="text-white">Location</p>
-            <p className="text-primary/60 text-left">Perú</p>
-          </div>
-        </CardContent>
-      </Card>
-      <Card className="mt-4 flex items-center">
-        <CardContent className="flex items-center w-full py-4 gap-4">
-          <div className="p-2 bg-secondary/20 rounded-full text-secondary">
-            <MapPin height="20" width="20" />
-          </div>
-          <div>
-            <p className="text-white">Experience</p>
-            <p className="text-secondary/60 text-left">5+ years</p>
-          </div>
-        </CardContent>
-      </Card>
+      <div className="flex flex-col gap-4 sm:flex-row sm:justify-between mt-4">
+        <Card className="flex items-center sm:flex-1">
+          <CardContent className="flex items-center w-full py-4 gap-4">
+            <div className="p-2 bg-primary/20 rounded-full text-primary">
+              <MapPin height="20" width="20" />
+            </div>
+            <div>
+              <p className="text-white">Location</p>
+              <p className="text-primary/60 text-left">Perú</p>
+            </div>
+          </CardContent>
+        </Card>
+        <Card className="flex items-center sm:flex-1">
+          <CardContent className="flex items-center w-full py-4 gap-4">
+            <div className="p-2 bg-secondary/20 rounded-full text-secondary">
+              <Code height="20" width="20" />
+            </div>
+            <div>
+              <p className="text-white">Experience</p>
+              <p className="text-secondary/60 text-left">5+ years</p>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
       <h2 className="text-xl my-8 font-medium text-white">
         Current Project Stack
       </h2>
