@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${rubik.className} antialiased min-h-[20000px]`}>
+      <body className={`${rubik.className} antialiased pb-12`}>
         <Navbar />
         {children}
       </body>
