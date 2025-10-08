@@ -18,44 +18,61 @@ export default function Hero() {
 
   return (
     <LandingSection className="w-full py-10">
-      <h4 className="text-secondary mb-4">Hi, my name is</h4>
-      <h1 className="text-4xl text-white font-bold">Diego Rios. </h1>
-      <h1 className="text-4xl text-primary font-bold">Frontend Engineer</h1>
-      <p className="mt-4">
-        I build exceptional web applications using{' '}
-        <span className="text-primary font-medium">React</span>,{' '}
-        <span className="text-primary font-medium">Next.js</span> and{' '}
-        <span className="text-primary font-medium">Angular</span>. From Perú 🇵🇪.
-        I specialize in creating scalable frontend solutions with modern
-        technologies.
-      </p>
-      <p className="mt-4">Technologies I work with</p>
-      <div className="flex flex-wrap gap-2 mt-2">
-        {technologies?.length > 0 &&
-          technologies.map((tech) => (
-            <Badge key={tech.id} variant="default">
-              {tech.label}
-            </Badge>
-          ))}
+      <div className="flex flex-col sm:flex-row">
+        <div className="sm:pr-16 sm:1/2">
+          <h4 className="text-secondary mb-4">Hi, my name is</h4>
+          <h1 className="text-4xl text-white font-bold">Diego Rios. </h1>
+          <h1 className="text-4xl text-primary font-bold">Frontend Engineer</h1>
+          <p className="mt-4">
+            I build exceptional web applications using{' '}
+            <span className="text-primary font-medium">React</span>,{' '}
+            <span className="text-primary font-medium">Next.js</span> and{' '}
+            <span className="text-primary font-medium">Angular</span>. From Perú
+            🇵🇪. I specialize in creating scalable frontend solutions with modern
+            technologies.
+          </p>
+          <p className="mt-4">Technologies I work with</p>
+          <div className="flex flex-wrap gap-2 mt-2">
+            {technologies?.length > 0 &&
+              technologies.map((tech) => (
+                <Badge key={tech.id} variant="default">
+                  {tech.label}
+                </Badge>
+              ))}
+          </div>
+          <div className="flex flex-col md:flex-row md:gap-4">
+            <Button
+              variant="secondary"
+              size="lg"
+              className="mt-4 w-full sm:w-auto"
+            >
+              View my work <ArrowDown />
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="mt-4 w-full sm:w-auto"
+            >
+              Get in touch <Mail />
+            </Button>
+          </div>
+        </div>
+        <div className="sm:w-1/2">
+          <div className="mt-8 relative ">
+            <Image
+              className="rounded-md z-40 relative "
+              src={profile}
+              alt="diego-profile"
+            ></Image>
+            <motion.div
+              initial={{ rotate: 0 }}
+              animate={{ rotate: 5, transition: { duration: 1 } }}
+              className="absolute z-10 top-0 left-0  h-full w-full rounded-md bg-linear-to-br from-secondary/20 to-primary/20"
+            ></motion.div>
+          </div>
+        </div>
       </div>
-      <Button variant="secondary" size="lg" className="mt-4 w-full">
-        View my work <ArrowDown />
-      </Button>
-      <Button variant="outline" size="lg" className="mt-4 w-full">
-        Get in touch <Mail />
-      </Button>
-      <div className="mt-8 relative">
-        <Image
-          className="rounded-md z-40 relative"
-          src={profile}
-          alt="diego-profile"
-        ></Image>
-        <motion.div
-          initial={{ rotate: 0 }}
-          animate={{ rotate: 5, transition: { duration: 1 } }}
-          className="absolute z-10 top-0 left-0  h-full w-full rounded-md bg-linear-to-br from-secondary/20 to-primary/20"
-        ></motion.div>
-      </div>
+
       <div className="my-12 w-full">
         <ArrowDown className="mx-auto animate-bounce cursor-pointer" />
       </div>
