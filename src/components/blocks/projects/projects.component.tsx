@@ -1,7 +1,7 @@
+'use client'
 import LandingSection from '@/components/custom/landingSection.component'
 import { Project } from './projects.interface'
 import Image from 'next/image'
-import { Card } from '@/components/ui/card'
 import {
   Carousel,
   CarouselContent,
@@ -10,6 +10,8 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel'
 import { Badge } from '@/components/ui/badge'
+import Link from 'next/link'
+import { ExternalLink } from 'lucide-react'
 
 export default function Projects() {
   const projects: Project[] = [
@@ -26,21 +28,17 @@ export default function Projects() {
       ],
       description:
         'LSS Invoicing is an internal platform that streamlined Lean Tech’s billing process, cutting manual work and boosting efficiency—driving 30%+ savings in operational costs.',
-      technologies: ['angular', 'tailwind'],
+      technologies: ['Angular', 'Tailwind', 'Storybook', 'Figma'],
+      url: 'https://www.figma.com/design/L37bLM8IPBQVYB28hOHWVm/New-LSS-Design?node-id=0-1&p=f&t=7cOYK4EOQGDoZr4g-0',
     },
     {
       id: 'personal-cfo',
-      name: 'Lean Tech Invocing Platform',
-      imgs: [
-        'login-new',
-        'login-old',
-        'invoice-new',
-        'invoice-old',
-        'create-salary-new',
-        'create-salary-old',
-      ],
-      description: 'test description',
-      technologies: ['angular', 'tailwind'],
+      name: 'Personal CFO',
+      imgs: ['landing', 'login', 'dashboard', 'analytics'],
+      description:
+        'Personal CFO is a web app that uses AI to extract and categorize bank transactions with a keyword-based system, giving users clear insights into their spending through smart analytics.',
+      technologies: ['NextJS', 'Tailwind', 'Python', 'AWS', 'Vercel'],
+      url: 'https://personal-cfo.io',
     },
   ]
 
@@ -52,13 +50,20 @@ export default function Projects() {
           <CarouselContent>
             {p.imgs.map((i) => (
               <CarouselItem key={i}>
-                <Image
-                  src={`/${i}.png`}
-                  alt={i}
-                  width={400}
-                  height={200}
-                  className="w-full"
-                ></Image>
+                <div className="w-full h-full relative">
+                  <Link href={p.url ? p.url : '#'} target="_blank">
+                    <div className="w-full h-full bg-transparent border hover:bg-border/10 rounded-md absolute top-0 left-0 flex items-center justify-center">
+                      <ExternalLink />
+                    </div>
+                    <Image
+                      src={`/${i}.png`}
+                      alt={i}
+                      width={1200}
+                      height={600}
+                      className="w-full rounded-md border-2 border-border/20"
+                    ></Image>
+                  </Link>
+                </div>
               </CarouselItem>
             ))}
           </CarouselContent>
@@ -71,7 +76,7 @@ export default function Projects() {
         </div>
         <div className="mt-4">
           <h5 className=" text-white font-medium">TECH STACK</h5>
-          <div className="flex gap-4 mt-2">
+          <div className="flex gap-4 mt-2 flex-wrap">
             {p?.technologies?.length > 0 &&
               p?.technologies?.map((tech) => (
                 <Badge key={tech} variant="default">
