@@ -23,25 +23,27 @@ export default function TechStack() {
           tech: 'Next.js',
           level: 'advanced',
           exp: '2+ years',
-          description: 'SSR, SSG, API routes, app router architecture',
+          description:
+            'Fast, SEO-ready apps with smart routing and server rendering.',
         },
         {
           tech: 'Angular',
           level: 'intermediate',
           exp: '2+ years',
-          description: 'Component architecture, services, reactive forms',
+          description:
+            'Robust, scalable interfaces for enterprise-grade projects.',
         },
         {
           tech: 'TypeScript',
           level: 'advanced',
           exp: '3+ years',
-          description: 'Type safety, interfaces, generics, advanced patterns',
+          description: 'Safer, cleaner, and more reliable code at scale.',
         },
         {
           tech: 'JavaScript',
           level: 'advanced',
           exp: '4+ years',
-          description: 'ES6+, async/await, DOM manipulation, modern APIs',
+          description: 'Modern, fast, and reliable web interactions.',
         },
       ],
     },
@@ -53,8 +55,7 @@ export default function TechStack() {
           tech: 'Tailwind CSS',
           level: 'advanced',
           exp: '2+ years',
-          description:
-            'Custom configurations, component libraries, responsive design',
+          description: 'Clean, responsive designs built fast and consistently.',
         },
         {
           tech: 'Storybook',
@@ -67,13 +68,13 @@ export default function TechStack() {
           level: 'advanced',
           exp: '4+ years',
           description:
-            'Animations, grid/flexbox, custom properties, BEM methodology',
+            'Polished layouts, smooth animations, and clean structure.',
         },
         {
           tech: 'Responsiveness',
           level: 'advanced',
           exp: '4+ years',
-          description: 'Mobile-first approach, cross-browser compatibility',
+          description: 'Pixel-perfect experiences on every screen size.',
         },
       ],
     },
@@ -85,20 +86,20 @@ export default function TechStack() {
           tech: 'PostgreSQL',
           level: 'intermediate',
           exp: '1+ year',
-          description:
-            'Complex queries, database design, performance optimization',
+          description: 'Reliable data handling with optimized queries.',
         },
         {
           tech: 'Supabase',
           level: 'intermediate',
           exp: '1+ year',
-          description: 'Authentication, real-time subscriptions, RLS policies',
+          description: 'Fast, secure backend setup with real-time data.',
         },
         {
           tech: 'Node.js',
           level: 'basic',
           exp: '6 months',
-          description: 'REST APIs, middleware, basic server architecture',
+          description:
+            'Lightweight APIs and server logic for quick integration.',
         },
         {
           tech: 'Python',
@@ -116,25 +117,25 @@ export default function TechStack() {
           tech: 'Git & GitHub',
           level: 'advanced',
           exp: '3+ years',
-          description: 'Branching strategies, code reviews, CI/CD workflows',
+          description: 'Clean version control and reviews',
         },
         {
           tech: 'VS Code',
           level: 'advanced',
           exp: '4+ years',
-          description: 'Extensions, debugging, workspace optimization',
+          description: 'Efficient setup for debugging and faster development.',
         },
         {
           tech: 'Figma',
           level: 'intermediate',
           exp: '2+ years',
-          description: 'Design-to-code workflow, component systems',
+          description: 'Bridging design and code for consistent UI systems.',
         },
         {
           tech: 'Vercel',
           level: 'intermediate',
           exp: '2+ years',
-          description: 'Deployment optimization, environment management',
+          description: 'Fast, reliable app deployments with zero downtime.',
         },
       ],
     },

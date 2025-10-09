@@ -26,12 +26,16 @@ export default function Hero() {
           <h1 className="text-4xl text-white font-bold">Diego Rios. </h1>
           <h1 className="text-4xl text-primary font-bold">Frontend Engineer</h1>
           <p className="mt-4">
-            I build exceptional web applications using{' '}
-            <span className="text-primary font-medium">React</span>,{' '}
+            I help startups and product teams build high-impact, scalable web
+            apps using <span className="text-primary font-medium">React</span>,{' '}
             <span className="text-primary font-medium">Next.js</span> and{' '}
-            <span className="text-primary font-medium">Angular</span>. From Perú
-            🇵🇪. I specialize in creating scalable frontend solutions with modern
-            technologies.
+            <span className="text-primary font-medium">Angular</span> (and a
+            healthy dose of Typescript). Based in Lima, Peru 🇵🇪 — global
+            mindset, local excellence.
+          </p>
+          <p className="mt-4">
+            🚀 From landing pages to complex platforms, I make sure your product
+            works, looks great, and grows with your business.{' '}
           </p>
           <p className="mt-4">Technologies I work with</p>
           <div className="flex flex-wrap gap-2 mt-2">

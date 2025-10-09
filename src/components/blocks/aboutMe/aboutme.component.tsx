@@ -38,16 +38,22 @@ export default function AboutMe() {
         Full-Stack Engineer from Perú
       </h2>
       <p className="mb-4">
-        I&apos;m Diego Rios, a passionate full-stack engineer specializing in
-        frontend development. With expertise in React, Next.js, and Angular, I
-        create beautiful, scalable web applications that deliver exceptional
-        user experiences.
+        I&apos;m Diego Rios, a software engineer from Lima, Peru — trusted by
+        startups and companies to turn ideas into solid, market-ready products.
       </p>
       <p>
-        My journey in web development has led me to work on diverse projects,
-        from personal finance tools to enterprise invoicing platforms. I believe
-        in writing clean, maintainable code and staying up-to-date with the
-        latest technologies and best practices.
+        Over the past 5 years, I’ve built everything from finance tools to
+        enterprise platforms, always focusing on three things:
+      </p>
+      <ol className="list-decimal list-inside mt-4 pl-4 text-white">
+        <li>Clarity</li>
+        <li>Quality</li>
+        <li>Growth</li>
+      </ol>
+      <p className="mt-4">
+        I combine a deep understanding of user experience with strong technical
+        foundations, but what truly defines my work is ownership — I treat every
+        product as if it were my own.
       </p>
       <div className="flex flex-col gap-4 sm:flex-row sm:justify-between mt-4">
         <Card className="flex items-center sm:flex-1">
