@@ -34,13 +34,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <ThemeProvider>
-      <html lang="en">
-        <body className={`${rubik.className} antialiased pb-12`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${rubik.className} antialiased pb-12`}>
+        <ThemeProvider>
           <Navbar />
           {children}
-        </body>
-      </html>
-    </ThemeProvider>
+        </ThemeProvider>
+      </body>
+    </html>
   )
 }

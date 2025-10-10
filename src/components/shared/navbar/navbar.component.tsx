@@ -15,6 +15,8 @@ export default function Navbar() {
   const { resolvedTheme, setTheme } = useTheme()
   const scrollY = useScrollY()
   const scrolled = scrollY > 0
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
 
@@ -90,10 +92,11 @@ export default function Navbar() {
         <div>
           <Image src={logoDark} alt="portfolio-logo" width={35} />
         </div>
-
-        <Toggle onClick={() => setTheme(isDark ? 'light' : 'dark')}>
-          {isDark ? '☀️' : '🌙'}
-        </Toggle>
+        {mounted && (
+          <Toggle onClick={() => setTheme(isDark ? 'light' : 'dark')}>
+            {isDark ? '☀️' : '🌙'}
+          </Toggle>
+        )}
         <div className="flex md:hidden">
           {/*TODO: the white has to be changed */}
           <button

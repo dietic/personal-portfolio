@@ -18,14 +18,7 @@ export default function Projects() {
     {
       id: 'lean-tech',
       name: 'Lean Tech Invocing Platform',
-      imgs: [
-        'login-new',
-        'login-old',
-        'invoice-new',
-        'invoice-old',
-        'create-salary-new',
-        'create-salary-old',
-      ],
+      imgs: ['login-new', 'invoice-new', 'create-salary-new'],
       description:
         'LSS Invoicing is an internal platform that streamlined Lean Tech’s billing process, cutting manual work and boosting efficiency—driving 30%+ savings in operational costs.',
       technologies: ['Angular', 'Tailwind', 'Storybook', 'Figma'],
