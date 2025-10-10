@@ -12,7 +12,7 @@ import { Toggle } from '@/components/ui/toggle'
 import { useTheme } from 'next-themes'
 
 export default function Navbar() {
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme, setTheme } = useTheme()
   const scrollY = useScrollY()
   const scrolled = scrollY > 0
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
@@ -75,7 +75,7 @@ export default function Navbar() {
     setMobileNavOpen(false)
   }
 
-  const isDark = theme === 'dark'
+  const isDark = resolvedTheme === 'dark'
 
   return (
     <nav className="fixed top-0 left-0 w-full flex justify-center z-50">
