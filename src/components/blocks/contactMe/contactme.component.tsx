@@ -5,7 +5,7 @@ import { Mail, MapPin, Phone } from 'lucide-react'
 export default function ContactMe() {
   return (
     <LandingSection>
-      <h1 className="font-medium text-4xl text-white">
+      <h1 className="font-medium text-4xl text-title">
         Let&apos;s <span className="text-primary">Talk</span>
       </h1>
       <p>
@@ -16,7 +16,7 @@ export default function ContactMe() {
         <Card className="p-4 mt-4 bg-linear-to-r from-primary/10 to-secondary/10">
           <div className="flex gap-3 items-center">
             <div className="w-3 h-3 rounded-full bg-secondary animate-pulse"></div>
-            <span className="text-white">Currently available</span>
+            <span className="text-title">Currently available</span>
           </div>
           <p className="py-2 text-foreground">
             I&apos;m actively looking for new opportunities and exciting
@@ -30,8 +30,8 @@ export default function ContactMe() {
                 <Mail height="20" width="20" />
               </div>
               <div>
-                <p className="text-white">Email</p>
-                <p className="text-primary/60 text-left">dierios93@gmail.com</p>
+                <p className="text-title">Email</p>
+                <p className="text-primary text-left">dierios93@gmail.com</p>
               </div>
             </CardContent>
           </Card>
@@ -41,8 +41,8 @@ export default function ContactMe() {
                 <Phone height="20" width="20" />
               </div>
               <div>
-                <p className="text-white">Phone</p>
-                <p className="text-secondary/60 text-left">+51 990 345 890</p>
+                <p className="text-title">Phone</p>
+                <p className="text-secondary text-left">+51 990 345 890</p>
               </div>
             </CardContent>
           </Card>
@@ -52,8 +52,8 @@ export default function ContactMe() {
                 <MapPin height="20" width="20" />
               </div>
               <div>
-                <p className="text-white">Location</p>
-                <p className="text-primary/60 text-left">Perú</p>
+                <p className="text-title">Location</p>
+                <p className="text-primary text-left">Perú</p>
               </div>
             </CardContent>
           </Card>

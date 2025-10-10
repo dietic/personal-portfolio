@@ -19,7 +19,7 @@ export default function LandingSection({
     },
   }
 
-  const sectionClasses = cn(className, `w-full pb-24`)
+  const sectionClasses = cn(className, `w-full pb-12`)
 
   return (
     <motion.section

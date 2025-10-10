@@ -23,7 +23,7 @@ export default function Hero() {
       <div className="flex flex-col sm:flex-row">
         <div className="sm:pr-16 sm:1/2">
           <h4 className="text-secondary mb-4">Hi, my name is</h4>
-          <h1 className="text-4xl text-white font-bold">Diego Rios. </h1>
+          <h1 className="text-4xl text-title font-bold">Diego Rios. </h1>
           <h1 className="text-4xl text-primary font-bold">Frontend Engineer</h1>
           <p className="mt-4">
             I help startups and product teams build high-impact, scalable web
@@ -81,7 +81,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="my-12 w-full">
+      <div className="mt-12 w-full">
         <ArrowDown
           className="mx-auto animate-bounce cursor-pointer"
           onClick={() => scrollTo('about')}

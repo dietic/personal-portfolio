@@ -4,3 +4,7 @@ export interface NavItem {
   href: string
   active: boolean
 }
+
+export interface NavbarProps {
+  theme: 'dark' | 'light'
+}

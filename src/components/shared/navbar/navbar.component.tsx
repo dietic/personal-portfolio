@@ -8,8 +8,11 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import logoDark from '../../../../public/logo-3.png'
 import { NavItem } from './navbar.interface'
+import { Toggle } from '@/components/ui/toggle'
+import { useTheme } from 'next-themes'
 
 export default function Navbar() {
+  const { theme, setTheme } = useTheme()
   const scrollY = useScrollY()
   const scrolled = scrollY > 0
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
@@ -72,6 +75,8 @@ export default function Navbar() {
     setMobileNavOpen(false)
   }
 
+  const isDark = theme === 'dark'
+
   return (
     <nav className="fixed top-0 left-0 w-full flex justify-center z-50">
       <div
@@ -85,6 +90,10 @@ export default function Navbar() {
         <div>
           <Image src={logoDark} alt="portfolio-logo" width={35} />
         </div>
+
+        <Toggle onClick={() => setTheme(isDark ? 'light' : 'dark')}>
+          {isDark ? '🌙' : '☀️'}
+        </Toggle>
         <div className="flex md:hidden">
           {/*TODO: the white has to be changed */}
           <button

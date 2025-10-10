@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Rubik } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/shared/navbar/navbar.component'
+import { ThemeProvider } from '@/components/providers/themeProvider'
 
 const rubik = Rubik({
   subsets: ['latin'],
@@ -33,11 +34,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`${rubik.className} antialiased pb-12`}>
-        <Navbar />
-        {children}
-      </body>
-    </html>
+    <ThemeProvider>
+      <html lang="en">
+        <body className={`${rubik.className} antialiased pb-12`}>
+          <Navbar />
+          {children}
+        </body>
+      </html>
+    </ThemeProvider>
   )
 }

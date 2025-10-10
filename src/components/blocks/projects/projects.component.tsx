@@ -71,11 +71,11 @@ export default function Projects() {
           <CarouselNext></CarouselNext>
         </Carousel>
         <div className="mt-4">
-          <h3 className="text-xl text-white font-medium">{p.name}</h3>
+          <h3 className="text-xl text-title font-medium">{p.name}</h3>
           <p>{p.description}</p>
         </div>
         <div className="mt-4">
-          <h5 className=" text-white font-medium">TECH STACK</h5>
+          <h5 className=" text-title font-medium">TECH STACK</h5>
           <div className="flex gap-4 mt-2 flex-wrap">
             {p?.technologies?.length > 0 &&
               p?.technologies?.map((tech) => (
@@ -91,7 +91,7 @@ export default function Projects() {
 
   return (
     <LandingSection>
-      <h1 className="font-medium text-4xl text-white">
+      <h1 className="font-medium text-4xl text-title">
         Featured <span className="text-primary">Projects</span>
       </h1>
       <p>

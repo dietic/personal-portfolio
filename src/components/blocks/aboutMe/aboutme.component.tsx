@@ -28,13 +28,13 @@ export default function AboutMe() {
 
   return (
     <LandingSection>
-      <h1 className="font-medium text-4xl text-white">
+      <h1 className="font-medium text-4xl text-title">
         About <span className="text-primary">Me</span>
       </h1>
       <p>
         Passionate about creating digital experiences that make a difference
       </p>
-      <h2 className="text-xl my-8 font-medium text-white">
+      <h2 className="text-xl my-8 font-medium text-title">
         Full-Stack Engineer from Perú
       </h2>
       <p className="mb-4">
@@ -45,7 +45,7 @@ export default function AboutMe() {
         Over the past 5 years, I’ve built everything from finance tools to
         enterprise platforms, always focusing on three things:
       </p>
-      <ol className="list-decimal list-inside mt-4 pl-4 text-white">
+      <ol className="list-decimal list-inside mt-4 pl-4 text-title">
         <li>Clarity</li>
         <li>Quality</li>
         <li>Growth</li>
@@ -62,7 +62,7 @@ export default function AboutMe() {
               <MapPin height="20" width="20" />
             </div>
             <div>
-              <p className="text-white">Location</p>
+              <p className="text-title">Location</p>
               <p className="text-primary/60 text-left">Perú</p>
             </div>
           </CardContent>
@@ -73,14 +73,14 @@ export default function AboutMe() {
               <Code height="20" width="20" />
             </div>
             <div>
-              <p className="text-white">Experience</p>
+              <p className="text-title">Experience</p>
               <p className="text-secondary/60 text-left">5+ years</p>
             </div>
           </CardContent>
         </Card>
       </div>
 
-      <h2 className="text-xl my-8 font-medium text-white">
+      <h2 className="text-xl my-8 font-medium text-title">
         Current Project Stack
       </h2>
       <div className="flex gap-4 justify-around">
@@ -93,7 +93,7 @@ export default function AboutMe() {
           ))}
       </div>
       <Card className="bg-gradient-to-r from-background/5 to-secondary/5 mt-8 py-8">
-        <h2 className="text-xl font-medium text-white text-center">
+        <h2 className="text-xl font-medium text-title text-center">
           What I bring to the table
         </h2>
         <div className="flex flex-col gap-8 pt-6">

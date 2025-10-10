@@ -168,7 +168,7 @@ export default function TechStack() {
 
   return (
     <LandingSection>
-      <h1 className="font-medium text-4xl text-white">
+      <h1 className="font-medium text-4xl text-title">
         Tech <span className="text-primary">Stack</span>
       </h1>
       <p>Deep expertise in modern technologies with real-world applications</p>
@@ -184,7 +184,7 @@ export default function TechStack() {
                   {/* <CodeXml size={16} /> */}
                   <DynamicIcon name={stack.icon} size={16} />
                 </div>
-                <h2 className="text-white font-medium capitalize">
+                <h2 className="text-title font-medium capitalize">
                   {stack.type}
                 </h2>
               </div>
@@ -197,7 +197,7 @@ export default function TechStack() {
                 {stack?.skills?.length > 0 &&
                   stack?.skills?.map((tech) => (
                     <motion.div variants={techItemVariants} key={tech.tech}>
-                      <Card className="bg-background text-white px-6 py-4">
+                      <Card className="bg-background text-title px-6 py-4">
                         <div className="flex justify-between flex-col xs:flex-row xs:items-center">
                           <div className="flex items-center gap-2">
                             <h4>{tech.tech}</h4>
