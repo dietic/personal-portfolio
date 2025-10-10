@@ -203,7 +203,7 @@ export default function TechStack() {
                             <h4>{tech.tech}</h4>
                             <span
                               className={cn(
-                                'text-xs capitalize py-0.5 px-2 rounded-md bg-gray-500/10',
+                                'text-white text-xs capitalize py-0.5 px-2 rounded-md bg-gray-500/10',
                                 tech.level === 'advanced' ? 'bg-primary' : '',
                                 tech.level === 'intermediate'
                                   ? 'bg-secondary'

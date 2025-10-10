@@ -92,7 +92,7 @@ export default function Navbar() {
         </div>
 
         <Toggle onClick={() => setTheme(isDark ? 'light' : 'dark')}>
-          {isDark ? '🌙' : '☀️'}
+          {isDark ? '☀️' : '🌙'}
         </Toggle>
         <div className="flex md:hidden">
           {/*TODO: the white has to be changed */}
