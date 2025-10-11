@@ -8,9 +8,9 @@ export default async function RootLayout({
   params,
 }: Readonly<{
   children: React.ReactNode
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }>) {
-  const { locale } = params
+  const { locale } = await params
 
   if (!SUPPORTED_LOCALES.includes(locale as Locale)) {
     notFound()
