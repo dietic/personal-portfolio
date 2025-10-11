@@ -1,0 +1,172 @@
+{
+  "navbar": {
+    "items": {
+      "home": "Home",
+      "about": "About",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "greeting": "Hi, my name is",
+    "description": "I help startups and product teams build high-impact, scalable web apps using <react>React</react>, <next>Next.js</next> and <angular>Angular</angular> (and a healthy dose of Typescript). Based in Lima, Peru 🇵🇪 — global mindset, local excellence.",
+    "description3": "🚀 From landing pages to complex platforms, I make sure your product works, looks great, and grows with your business.",
+    "techstackSubtitle": "Technologies I work with",
+    "buttons": {
+      "work": "View my work",
+      "contact": "Get in touch"
+    }
+  },
+  "about": {
+    "title": "About <me>Me</me>",
+    "subtitle": "Passionate about creating digital experiences that make a difference",
+    "headline": "Full-Stack Engineer from Perú",
+    "story": {
+      "intro": "I'm Diego Rios, a software engineer from Lima, Peru — trusted by startups and companies to turn ideas into solid, market-ready products.",
+      "focusIntro": "Over the past 5 years, I’ve built everything from finance tools to enterprise platforms, always focusing on three things:",
+      "focusAreas": ["Clarity", "Quality", "Growth"],
+      "outro": "I combine a deep understanding of user experience with strong technical foundations, but what truly defines my work is ownership — I treat every product as if it were my own."
+    },
+    "currentStack": {
+      "title": "Current Project Stack"
+    },
+    "valueProposition": {
+      "title": "What I bring to the table",
+      "experienceSubtitle": "years of experience",
+      "focusSubtitle": "specialized focus",
+      "extraSubtitle": "growing expertise"
+    }
+  },
+  "techStack": {
+    "title": "Tech <stack>Stack</stack>",
+    "subtitle": "Deep expertise in modern technologies with real-world applications",
+    "categories": {
+      "frontend": "Frontend",
+      "styling": "Styling",
+      "backend": "Backend",
+      "tools": "Tools"
+    },
+    "levels": {
+      "basic": "basic",
+      "intermediate": "intermediate",
+      "advanced": "advanced"
+    },
+    "tech": {
+      "react": {
+        "label": "React",
+        "desc": "Complex state, custom hooks, performance optimization."
+      },
+      "next": {
+        "label": "Next.js",
+        "desc": "Fast, SEO-ready apps with smart routing and SSR."
+      },
+      "angular": {
+        "label": "Angular",
+        "desc": "Robust, scalable interfaces for enterprise projects."
+      },
+      "typescript": {
+        "label": "TypeScript",
+        "desc": "Safer, cleaner, more reliable code at scale."
+      },
+      "javascript": {
+        "label": "JavaScript",
+        "desc": "Modern, fast, reliable web interactions."
+      },
+      "tailwind": {
+        "label": "Tailwind CSS",
+        "desc": "Clean, responsive designs built fast and consistently."
+      },
+      "storybook": {
+        "label": "Storybook",
+        "desc": "Component documentation, design-system maintenance."
+      },
+      "css-scss": {
+        "label": "CSS/SCSS",
+        "desc": "Polished layouts, smooth animations, clean structure."
+      },
+      "responsiveness": {
+        "label": "Responsiveness",
+        "desc": "Pixel-perfect on every screen size."
+      },
+      "postgres": {
+        "label": "PostgreSQL",
+        "desc": "Reliable data handling with optimized queries."
+      },
+      "supabase": {
+        "label": "Supabase",
+        "desc": "Fast, secure backend with real-time data."
+      },
+      "node": {
+        "label": "Node.js",
+        "desc": "Lightweight APIs and server logic for quick integration."
+      },
+      "python": {
+        "label": "Python",
+        "desc": "Data processing, basic scripting, API integration."
+      },
+      "git": {
+        "label": "Git & GitHub",
+        "desc": "Clean version control and reviews."
+      },
+      "vscode": {
+        "label": "VS Code",
+        "desc": "Efficient setup for debugging and faster development."
+      },
+      "figma": {
+        "label": "Figma",
+        "desc": "Bridging design and code for consistent UI systems."
+      },
+      "vercel": {
+        "label": "Vercel",
+        "desc": "Fast, reliable deployments with zero downtime."
+      }
+    }
+  },
+  "projects": {
+    "title": "Featured <projects>projects</projects>",
+    "subtitle": "A showcase of my recent work and the technologies I've mastered.",
+    "projects": [
+      {
+        "id": "lean-tech",
+        "name": "Lean Tech Invoicing Platform",
+        "description": "LSS Invoicing, an internal platform, streamlined Lean Tech’s billing—cutting manual work, boosting efficiency, with UX/UI designed from scratch—driving 30%+ cost savings.",
+        "technologies": ["angular", "tailwind", "storybook", "figma"],
+        "imgs": ["login-new", "invoice-new", "create-salary-new"],
+        "url": "https://www.figma.com/design/L37bLM8IPBQVYB28hOHWVm/New-LSS-Design?node-id=0-1&p=f&t=7cOYK4EOQGDoZr4g-0"
+      },
+      {
+        "id": "personal-cfo",
+        "name": "Personal CFO",
+        "description": "Personal CFO is a web app that uses AI to extract and categorize bank transactions with a keyword-based system, giving users clear insights into their spending through smart analytics.",
+        "technologies": ["nextJS", "tailwind", "python", "AWS", "vercel"],
+        "imgs": ["landing", "login", "dashboard", "analytics"],
+        "url": "https://personal-cfo.io"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's <talk>Talk</talk>",
+    "subtitle": "Ready to bring your next project to life? I'd love to hear from you!",
+    "status": {
+      "title": "Currently available",
+      "subtitle": "I'm actively looking for new opportunities and exciting projects. Let's discuss how we can work together"
+    }
+  },
+  "common": {
+    "or": "or",
+    "and": "and",
+    "loading": "Loading...",
+    "location": {
+      "title": "location",
+      "place": "Perú"
+    },
+    "experience": {
+      "title": "experience",
+      "time": "{years}+ years"
+    },
+    "phone": {
+      "title": "Phone"
+    }
+  }
+}

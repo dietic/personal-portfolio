@@ -1,0 +1,172 @@
+{
+  "navbar": {
+    "items": {
+      "home": "Inicio",
+      "about": "Sobre mí",
+      "skills": "Habilidades",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    }
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "description": "Ayudo a startups y equipos de producto a crear apps web escalables y de alto impacto con <react>React</react>, <next>Next.js</next> y <angular>Angular</angular> (y una buena dosis de TypeScript). Con base en Lima, Perú 🇵🇪 — mentalidad global, ejecución local.",
+    "description3": "🚀 Desde landing pages hasta plataformas complejas, me aseguro de que tu producto funcione, se vea increíble y crezca con tu negocio.",
+    "techstackSubtitle": "Tecnologías con las que trabajo",
+    "buttons": {
+      "work": "Ver mi trabajo",
+      "contact": "Ponte en contacto"
+    }
+  },
+  "about": {
+    "title": "Sobre <me>Mí</me>",
+    "subtitle": "Apasionado por crear experiencias digitales que generan impacto",
+    "headline": "Full-Stack Engineer de Perú",
+    "story": {
+      "intro": "Soy Diego Rios, ingeniero de software de Lima, Perú — socios y startups confían en mí para convertir ideas en productos sólidos y listos para el mercado.",
+      "focusIntro": "En los últimos 5 años he construido desde herramientas financieras hasta plataformas empresariales, siempre con foco en tres cosas:",
+      "focusAreas": ["Claridad", "Calidad", "Crecimiento"],
+      "outro": "Combino una visión profunda de UX con bases técnicas sólidas, pero lo que realmente me define es el ownership: trato cada producto como si fuera mío."
+    },
+    "currentStack": {
+      "title": "Stack actual del proyecto"
+    },
+    "valueProposition": {
+      "title": "Lo que aporto",
+      "experienceSubtitle": "años de experiencia",
+      "focusSubtitle": "enfoque especializado",
+      "extraSubtitle": "experiencia en crecimiento"
+    }
+  },
+  "techStack": {
+    "title": "Stack <stack>Tecnológico</stack>",
+    "subtitle": "Experiencia real en tecnologías modernas aplicada a productos",
+    "categories": {
+      "frontend": "Frontend",
+      "styling": "Estilos",
+      "backend": "Backend",
+      "tools": "Herramientas"
+    },
+    "levels": {
+      "basic": "básico",
+      "intermediate": "intermedio",
+      "advanced": "avanzado"
+    },
+    "tech": {
+      "react": {
+        "label": "React",
+        "desc": "Estado complejo, custom hooks y optimización de performance."
+      },
+      "next": {
+        "label": "Next.js",
+        "desc": "Apps rápidas, SEO-ready, enrutado inteligente y SSR."
+      },
+      "angular": {
+        "label": "Angular",
+        "desc": "Interfaces robustas y escalables para entornos enterprise."
+      },
+      "typescript": {
+        "label": "TypeScript",
+        "desc": "Código más seguro, claro y confiable a escala."
+      },
+      "javascript": {
+        "label": "JavaScript",
+        "desc": "Interacciones web modernas, rápidas y confiables."
+      },
+      "tailwind": {
+        "label": "Tailwind CSS",
+        "desc": "Diseños limpios y responsivos, construidos rápido y consistente."
+      },
+      "storybook": {
+        "label": "Storybook",
+        "desc": "Documentación de componentes y mantenimiento de design systems."
+      },
+      "css-scss": {
+        "label": "CSS/SCSS",
+        "desc": "Layouts pulidos, animaciones fluidas y estructura limpia."
+      },
+      "responsiveness": {
+        "label": "Responsiveness",
+        "desc": "Pixel-perfect en todos los tamaños de pantalla."
+      },
+      "postgres": {
+        "label": "PostgreSQL",
+        "desc": "Manejo de datos confiable con consultas optimizadas."
+      },
+      "supabase": {
+        "label": "Supabase",
+        "desc": "Backends rápidos y seguros con datos en tiempo real."
+      },
+      "node": {
+        "label": "Node.js",
+        "desc": "APIs ligeras y lógica de servidor de integración rápida."
+      },
+      "python": {
+        "label": "Python",
+        "desc": "Procesamiento de datos, scripting básico e integración con APIs."
+      },
+      "git": {
+        "label": "Git & GitHub",
+        "desc": "Control de versiones limpio y code reviews eficaces."
+      },
+      "vscode": {
+        "label": "VS Code",
+        "desc": "Setup eficiente para depurar y desarrollar más rápido."
+      },
+      "figma": {
+        "label": "Figma",
+        "desc": "Puente entre diseño y código para UIs consistentes."
+      },
+      "vercel": {
+        "label": "Vercel",
+        "desc": "Despliegues rápidos y confiables sin downtime."
+      }
+    }
+  },
+  "projects": {
+    "title": "Proyectos <projects>destacados</projects>",
+    "subtitle": "Una muestra de mi trabajo reciente y las tecnologías que domino.",
+    "projects": [
+      {
+        "id": "lean-tech",
+        "name": "Lean Tech Invoicing Platform",
+        "description": "LSS Invoicing es una plataforma interna que optimizó la facturación de Lean Tech — redujo trabajo manual, aumentó la eficiencia y diseñé la UX/UI desde cero — logrando más del 30% de ahorro operativo.",
+        "technologies": ["angular", "tailwind", "storybook", "figma"],
+        "imgs": ["login-new", "invoice-new", "create-salary-new"],
+        "url": "https://www.figma.com/design/L37bLM8IPBQVYB28hOHWVm/New-LSS-Design?node-id=0-1&p=f&t=7cOYK4EOQGDoZr4g-0"
+      },
+      {
+        "id": "personal-cfo",
+        "name": "Personal CFO",
+        "description": "Personal CFO es una web app que usa IA para extraer y categorizar transacciones bancarias mediante un sistema de keywords, entregando insights claros del gasto con analítica inteligente.",
+        "technologies": ["nextJS", "tailwind", "python", "AWS", "vercel"],
+        "imgs": ["landing", "login", "dashboard", "analytics"],
+        "url": "https://personal-cfo.io"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Hablemos <talk>Hablemos</talk>",
+    "subtitle": "¿Listo para lanzar tu próximo proyecto? ¡Me encantaría hablar contigo!",
+    "status": {
+      "title": "Disponible actualmente",
+      "subtitle": "Estoy buscando nuevos retos y proyectos interesantes. Conversemos cómo podemos trabajar juntos."
+    }
+  },
+  "common": {
+    "or": "o",
+    "and": "y",
+    "loading": "Cargando...",
+    "location": {
+      "title": "ubicación",
+      "place": "Perú"
+    },
+    "experience": {
+      "title": "experiencia",
+      "time": "{years}+ años"
+    },
+    "phone": {
+      "title": "Teléfono"
+    }
+  }
+}

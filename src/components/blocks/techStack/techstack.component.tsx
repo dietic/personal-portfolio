@@ -5,137 +5,137 @@ import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
 import { Calendar, CheckCircle } from 'lucide-react'
 import { DynamicIcon } from 'lucide-react/dynamic'
-import { Tech } from './techstack.interface'
+import { Level, Tech } from './techstack.interface'
+import { useTranslations } from 'next-intl'
 export default function TechStack() {
+  const t = useTranslations()
+
   const techStacks: Tech[] = [
     {
-      type: 'frontend',
+      type: t('techStack.categories.frontend'),
       icon: 'code-xml',
       skills: [
         {
-          tech: 'React',
-          level: 'advanced',
-          exp: '3+ years',
-          description:
-            'Complex state management, custom hooks, performance optimization',
+          tech: t('techStack.tech.react.label'),
+          level: t('techStack.levels.advanced') as Level,
+          exp: t('common.experience.time', { years: 3 }),
+          description: t('techStack.tech.react.desc'),
         },
         {
-          tech: 'Next.js',
-          level: 'advanced',
-          exp: '2+ years',
-          description:
-            'Fast, SEO-ready apps with smart routing and server rendering.',
+          tech: t('techStack.tech.next.label'),
+          level: t('techStack.levels.advanced') as Level,
+          exp: t('common.experience.time', { years: 2 }),
+          description: t('techStack.tech.next.desc'),
         },
         {
-          tech: 'Angular',
-          level: 'intermediate',
-          exp: '2+ years',
-          description:
-            'Robust, scalable interfaces for enterprise-grade projects.',
+          tech: t('techStack.tech.angular.label'),
+          level: t('techStack.levels.intermediate') as Level,
+          exp: t('common.experience.time', { years: 2 }),
+          description: t('techStack.tech.angular.desc'),
         },
         {
-          tech: 'TypeScript',
-          level: 'advanced',
-          exp: '3+ years',
-          description: 'Safer, cleaner, and more reliable code at scale.',
+          tech: t('techStack.tech.typescript.label'),
+          level: t('techStack.levels.advanced') as Level,
+          exp: t('common.experience.time', { years: 3 }),
+          description: t('techStack.tech.typescript.desc'),
         },
         {
-          tech: 'JavaScript',
-          level: 'advanced',
-          exp: '4+ years',
-          description: 'Modern, fast, and reliable web interactions.',
+          tech: t('techStack.tech.javascript.label'),
+          level: t('techStack.levels.advanced') as Level,
+          exp: t('common.experience.time', { years: 4 }),
+          description: t('techStack.tech.javascript.desc'),
         },
       ],
     },
     {
-      type: 'styling',
+      type: t('techStack.categories.styling'),
       icon: 'palette',
       skills: [
         {
-          tech: 'Tailwind CSS',
-          level: 'advanced',
-          exp: '2+ years',
-          description: 'Clean, responsive designs built fast and consistently.',
+          tech: t('techStack.tech.tailwind.label'),
+          level: t('techStack.levels.advanced') as Level,
+          exp: t('common.experience.time', { years: 2 }),
+          description: t('techStack.tech.tailwind.desc'),
         },
         {
-          tech: 'Storybook',
-          level: 'intermediate',
-          exp: '1+ year',
-          description: 'Component documentation, design system maintenance',
+          tech: t('techStack.tech.storybook.label'),
+          level: t('techStack.levels.intermediate') as Level,
+          exp: t('common.experience.time', { years: 1 }),
+          description: t('techStack.tech.storybook.desc'),
         },
         {
-          tech: 'CSS/SCSS',
-          level: 'advanced',
-          exp: '4+ years',
-          description:
-            'Polished layouts, smooth animations, and clean structure.',
+          tech: t('techStack.tech.css-scss.label'),
+          level: t('techStack.levels.advanced') as Level,
+          exp: t('common.experience.time', { years: 4 }),
+          description: t('techStack.tech.css-scss.desc'),
         },
         {
-          tech: 'Responsiveness',
-          level: 'advanced',
-          exp: '4+ years',
-          description: 'Pixel-perfect experiences on every screen size.',
+          tech: t('techStack.tech.responsiveness.label'),
+          level: t('techStack.levels.advanced') as Level,
+          exp: t('common.experience.time', { years: 4 }),
+          description: t('techStack.tech.responsiveness.desc'),
         },
       ],
     },
     {
-      type: 'backend',
+      type: t('techStack.categories.backend'),
       icon: 'database',
       skills: [
         {
-          tech: 'PostgreSQL',
-          level: 'intermediate',
-          exp: '1+ year',
-          description: 'Reliable data handling with optimized queries.',
+          tech: t('techStack.tech.postgres.label'),
+          level: t('techStack.levels.intermediate') as Level,
+          exp: t('common.experience.time', { years: 1 }),
+          description: t('techStack.tech.postgres.desc'),
         },
         {
-          tech: 'Supabase',
-          level: 'intermediate',
-          exp: '1+ year',
-          description: 'Fast, secure backend setup with real-time data.',
+          tech: t('techStack.tech.supabase.label'),
+          level: t('techStack.levels.intermediate') as Level,
+          exp: t('common.experience.time', { years: 1 }),
+          description: t('techStack.tech.supabase.desc'),
         },
         {
-          tech: 'Node.js',
-          level: 'basic',
-          exp: '6 months',
-          description:
-            'Lightweight APIs and server logic for quick integration.',
+          tech: t('techStack.tech.node.label'),
+          level: t('techStack.levels.basic') as Level,
+          // was "6 months" → normalize to 1+ years
+          exp: t('common.experience.time', { years: 1 }),
+          description: t('techStack.tech.node.desc'),
         },
         {
-          tech: 'Python',
-          level: 'basic',
-          exp: '6 months',
-          description: 'Data processing, basic scripting, API integration',
+          tech: t('techStack.tech.python.label'),
+          level: t('techStack.levels.basic') as Level,
+          // was "6 months" → normalize to 1+ years
+          exp: t('common.experience.time', { years: 1 }),
+          description: t('techStack.tech.python.desc'),
         },
       ],
     },
     {
-      type: 'tools',
+      type: t('techStack.categories.tools'),
       icon: 'git-branch',
       skills: [
         {
-          tech: 'Git & GitHub',
-          level: 'advanced',
-          exp: '3+ years',
-          description: 'Clean version control and reviews',
+          tech: t('techStack.tech.git.label'),
+          level: t('techStack.levels.advanced') as Level,
+          exp: t('common.experience.time', { years: 3 }),
+          description: t('techStack.tech.git.desc'),
         },
         {
-          tech: 'VS Code',
-          level: 'advanced',
-          exp: '4+ years',
-          description: 'Efficient setup for debugging and faster development.',
+          tech: t('techStack.tech.vscode.label'),
+          level: t('techStack.levels.advanced') as Level,
+          exp: t('common.experience.time', { years: 4 }),
+          description: t('techStack.tech.vscode.desc'),
         },
         {
-          tech: 'Figma',
-          level: 'intermediate',
-          exp: '2+ years',
-          description: 'Bridging design and code for consistent UI systems.',
+          tech: t('techStack.tech.figma.label'),
+          level: t('techStack.levels.intermediate') as Level,
+          exp: t('common.experience.time', { years: 2 }),
+          description: t('techStack.tech.figma.desc'),
         },
         {
-          tech: 'Vercel',
-          level: 'intermediate',
-          exp: '2+ years',
-          description: 'Fast, reliable app deployments with zero downtime.',
+          tech: t('techStack.tech.vercel.label'),
+          level: t('techStack.levels.intermediate') as Level,
+          exp: t('common.experience.time', { years: 2 }),
+          description: t('techStack.tech.vercel.desc'),
         },
       ],
     },
@@ -169,9 +169,11 @@ export default function TechStack() {
   return (
     <LandingSection>
       <h1 className="font-medium text-4xl text-title">
-        Tech <span className="text-primary">Stack</span>
+        {t.rich('techStack.title', {
+          stack: (chunk) => <span className="text-primary">{chunk}</span>,
+        })}
       </h1>
-      <p>Deep expertise in modern technologies with real-world applications</p>
+      <p>{t('techStack.subtitle')}</p>
       <div className="flex flex-col gap-4 mt-8 lg:flex-row md:flex-wrap">
         {techStacks?.length > 0 &&
           techStacks?.map((stack) => (
@@ -203,9 +205,13 @@ export default function TechStack() {
                             <h4>{tech.tech}</h4>
                             <span
                               className={cn(
-                                'text-white text-xs capitalize py-0.5 px-2 rounded-md bg-gray-500/10',
-                                tech.level === 'advanced' ? 'bg-primary' : '',
-                                tech.level === 'intermediate'
+                                'text-white text-xs capitalize py-0.5 px-2 rounded-md bg-gray-800',
+                                tech.level === 'advanced' ||
+                                  tech.level === 'avanzado'
+                                  ? 'bg-primary'
+                                  : '',
+                                tech.level === 'intermediate' ||
+                                  tech.level === 'intermedio'
                                   ? 'bg-secondary'
                                   : '',
                               )}

@@ -10,44 +10,56 @@ import logoDark from '../../../../public/logo-3.png'
 import { NavItem } from './navbar.interface'
 import { Toggle } from '@/components/ui/toggle'
 import { useTheme } from 'next-themes'
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { useLocale, useTranslations } from 'next-intl'
+import { useRouter } from 'next/navigation'
 
 export default function Navbar() {
-  const { resolvedTheme, setTheme } = useTheme()
-  const scrollY = useScrollY()
-  const scrolled = scrollY > 0
-  const [mounted, setMounted] = useState(false)
   useEffect(() => setMounted(true), [])
+
+  const { resolvedTheme, setTheme } = useTheme()
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
+  const [mounted, setMounted] = useState(false)
 
+  const scrollY = useScrollY()
+  const scrolled = scrollY > 0
+
+  const router = useRouter()
+  const t = useTranslations()
+
+  const locale = useLocale()
+  useEffect(() => {
+    console.log('locale', locale)
+  }, [locale])
   const navItems: NavItem[] = [
     {
       id: 'home',
-      label: 'Home',
+      label: `${t('navbar.items.home')}`,
       href: '#home',
       active: activeSection === 'home',
     },
     {
       id: 'about',
-      label: 'About',
+      label: `${t('navbar.items.about')}`,
       href: '#about',
       active: activeSection === 'about',
     },
     {
       id: 'skills',
-      label: 'Skills',
+      label: `${t('navbar.items.skills')}`,
       href: '#skills',
       active: activeSection === 'skills',
     },
     {
       id: 'projects',
-      label: 'Projects',
+      label: `${t('navbar.items.projects')}`,
       href: '#projects',
       active: activeSection === 'projects',
     },
     {
       id: 'contact',
-      label: 'Contact',
+      label: `${t('navbar.items.contact')}`,
       href: '#contact',
       active: activeSection === 'contact',
     },
@@ -77,6 +89,11 @@ export default function Navbar() {
     setMobileNavOpen(false)
   }
 
+  const handleLocaleChange = (value: string) => {
+    console.log('locale', value)
+    router.push(`/${value}`)
+  }
+
   const isDark = resolvedTheme === 'dark'
 
   return (
@@ -92,11 +109,23 @@ export default function Navbar() {
         <div>
           <Image src={logoDark} alt="portfolio-logo" width={35} />
         </div>
-        {mounted && (
-          <Toggle onClick={() => setTheme(isDark ? 'light' : 'dark')}>
-            {isDark ? '☀️' : '🌙'}
-          </Toggle>
-        )}
+        <div className="flex gap-4">
+          {mounted && (
+            <Toggle onClick={() => setTheme(isDark ? 'light' : 'dark')}>
+              {isDark ? '☀️' : '🌙'}
+            </Toggle>
+          )}
+          <Tabs
+            defaultValue={locale}
+            onValueChange={(value) => handleLocaleChange(value)}
+          >
+            <TabsList>
+              <TabsTrigger value="en">EN</TabsTrigger>
+              <TabsTrigger value="es">ES</TabsTrigger>
+            </TabsList>
+          </Tabs>
+        </div>
+
         <div className="flex md:hidden">
           {/*TODO: the white has to be changed */}
           <button

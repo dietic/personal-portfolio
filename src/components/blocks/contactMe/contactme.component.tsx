@@ -1,27 +1,25 @@
 import LandingSection from '@/components/custom/landingSection.component'
 import { Card, CardContent } from '@/components/ui/card'
 import { Mail, MapPin, Phone } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 
 export default function ContactMe() {
+  const t = useTranslations()
   return (
     <LandingSection>
       <h1 className="font-medium text-4xl text-title">
-        Let&apos;s <span className="text-primary">Talk</span>
+        {t.rich('contact.title', {
+          talk: (chunk) => <span className="text-primary">{chunk}</span>,
+        })}
       </h1>
-      <p>
-        Ready to bring your next project to life? I&apos;d love to hear from
-        you!
-      </p>
+      <p>{t('contact.subtitle')}</p>
       <div className="flex flex-col gap-4">
         <Card className="p-4 mt-4 bg-linear-to-r from-primary/10 to-secondary/10">
           <div className="flex gap-3 items-center">
             <div className="w-3 h-3 rounded-full bg-secondary animate-pulse"></div>
-            <span className="text-title">Currently available</span>
+            <span className="text-title">{t('contact.status.title')}</span>
           </div>
-          <p className="py-2 text-foreground">
-            I&apos;m actively looking for new opportunities and exciting
-            projects. Let&apos;s discuss how we can work together
-          </p>
+          <p className="py-2 text-foreground">{t('contact.status.subtitle')}</p>
         </Card>
         <div className="flex flex-col gap-2">
           <Card className=" flex items-center">
@@ -41,7 +39,7 @@ export default function ContactMe() {
                 <Phone height="20" width="20" />
               </div>
               <div>
-                <p className="text-title">Phone</p>
+                <p className="text-title">{t('common.phone.title')}</p>
                 <p className="text-secondary text-left">+51 990 345 890</p>
               </div>
             </CardContent>
@@ -52,7 +50,9 @@ export default function ContactMe() {
                 <MapPin height="20" width="20" />
               </div>
               <div>
-                <p className="text-title">Location</p>
+                <p className="text-title capitalize">
+                  {t('common.location.title')}
+                </p>
                 <p className="text-primary text-left">Perú</p>
               </div>
             </CardContent>

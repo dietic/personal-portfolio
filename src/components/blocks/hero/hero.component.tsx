@@ -7,6 +7,7 @@ import Image from 'next/image'
 import LandingSection from '@/components/custom/landingSection.component'
 import { motion } from 'framer-motion'
 import { useScrollToSection } from '@/hooks/useScrollToSection'
+import { useTranslations } from 'next-intl'
 export default function Hero() {
   const scrollTo = useScrollToSection()
   const technologies = [
@@ -17,27 +18,31 @@ export default function Hero() {
     { id: 'tailwind', label: 'Tailwind CSS' },
     { id: 'postgres', label: 'PostgreSQL' },
   ]
+  const t = useTranslations()
 
   return (
     <LandingSection className="w-full py-10">
       <div className="flex flex-col sm:flex-row">
         <div className="sm:pr-16 sm:1/2">
-          <h4 className="text-secondary mb-4">Hi, my name is</h4>
+          <h4 className="text-secondary mb-4">{t('hero.greeting')}</h4>
           <h1 className="text-4xl text-title font-bold">Diego Rios. </h1>
           <h1 className="text-4xl text-primary font-bold">Frontend Engineer</h1>
+          {/* Change for conjunction */}
           <p className="mt-4">
-            I help startups and product teams build high-impact, scalable web
-            apps using <span className="text-primary font-medium">React</span>,{' '}
-            <span className="text-primary font-medium">Next.js</span> and{' '}
-            <span className="text-primary font-medium">Angular</span> (and a
-            healthy dose of Typescript). Based in Lima, Peru 🇵🇪 — global
-            mindset, local excellence.
+            {t.rich('hero.description', {
+              react: (chunk) => (
+                <span className="text-primary font-medium">{chunk}</span>
+              ),
+              next: (chunk) => (
+                <span className="text-primary font-medium">{chunk}</span>
+              ),
+              angular: (chunk) => (
+                <span className="text-primary font-medium">{chunk}</span>
+              ),
+            })}
           </p>
-          <p className="mt-4">
-            🚀 From landing pages to complex platforms, I make sure your product
-            works, looks great, and grows with your business.{' '}
-          </p>
-          <p className="mt-4">Technologies I work with</p>
+          <p className="mt-4">{t('hero.description3')} </p>
+          <p className="mt-4">{t('hero.techstackSubtitle')}</p>
           <div className="flex flex-wrap gap-2 mt-2">
             {technologies?.length > 0 &&
               technologies.map((tech) => (
@@ -53,7 +58,7 @@ export default function Hero() {
               className="mt-4 w-full sm:w-auto"
               onClick={() => scrollTo('projects')}
             >
-              View my work <ArrowDown />
+              {t('hero.buttons.work')} <ArrowDown />
             </Button>
             <Button
               variant="outline"
@@ -61,7 +66,7 @@ export default function Hero() {
               className="mt-4 w-full sm:w-auto"
               onClick={() => scrollTo('contact')}
             >
-              Get in touch <Mail />
+              {t('hero.buttons.contact')} <Mail />
             </Button>
           </div>
         </div>

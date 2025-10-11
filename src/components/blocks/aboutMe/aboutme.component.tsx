@@ -3,6 +3,7 @@ import { Card, CardContent } from '../../ui/card'
 import Image from 'next/image'
 import { TechStack } from './aboutme.interface'
 import LandingSection from '@/components/custom/landingSection.component'
+import { useTranslations } from 'next-intl'
 
 export default function AboutMe() {
   const techStack: TechStack[] = [
@@ -26,35 +27,28 @@ export default function AboutMe() {
     },
   ]
 
+  const t = useTranslations()
+  const focusAreas = t.raw('about.story.focusAreas')
   return (
     <LandingSection>
       <h1 className="font-medium text-4xl text-title">
-        About <span className="text-primary">Me</span>
+        {t.rich('about.title', {
+          me: (chunk) => <span className="text-primary">{chunk}</span>,
+        })}
       </h1>
-      <p>
-        Passionate about creating digital experiences that make a difference
-      </p>
+      <p>{t('about.subtitle')}</p>
       <h2 className="text-xl my-8 font-medium text-title">
-        Full-Stack Engineer from Perú
+        {t('about.headline')}
       </h2>
-      <p className="mb-4">
-        I&apos;m Diego Rios, a software engineer from Lima, Peru — trusted by
-        startups and companies to turn ideas into solid, market-ready products.
-      </p>
-      <p>
-        Over the past 5 years, I’ve built everything from finance tools to
-        enterprise platforms, always focusing on three things:
-      </p>
+      <p className="mb-4">{t('about.story.intro')}</p>
+      <p>{t('about.story.focusIntro')}</p>
       <ol className="list-decimal list-inside mt-4 pl-4 text-title">
-        <li>Clarity</li>
-        <li>Quality</li>
-        <li>Growth</li>
+        {focusAreas.length > 0 &&
+          focusAreas.map((area: string, idx: number) => (
+            <li key={idx}>{area}</li>
+          ))}
       </ol>
-      <p className="mt-4">
-        I combine a deep understanding of user experience with strong technical
-        foundations, but what truly defines my work is ownership — I treat every
-        product as if it were my own.
-      </p>
+      <p className="mt-4">{t('about.story.outro')}</p>
       <div className="flex flex-col gap-4 sm:flex-row sm:justify-between mt-4">
         <Card className="flex items-center sm:flex-1">
           <CardContent className="flex items-center w-full py-4 gap-4">
@@ -62,8 +56,12 @@ export default function AboutMe() {
               <MapPin height="20" width="20" />
             </div>
             <div>
-              <p className="text-title">Location</p>
-              <p className="text-primary/60 text-left">Perú</p>
+              <p className="text-title capitalize">
+                {t('common.location.title')}
+              </p>
+              <p className="text-primary/60 text-left">
+                {t('common.location.place')}
+              </p>
             </div>
           </CardContent>
         </Card>
@@ -73,15 +71,19 @@ export default function AboutMe() {
               <Code height="20" width="20" />
             </div>
             <div>
-              <p className="text-title">Experience</p>
-              <p className="text-secondary/60 text-left">5+ years</p>
+              <p className="text-title capitalize">
+                {t('common.experience.title')}
+              </p>
+              <p className="text-secondary/60 text-left">
+                {t('common.experience.time', { years: 5 })}
+              </p>
             </div>
           </CardContent>
         </Card>
       </div>
 
       <h2 className="text-xl my-8 font-medium text-title">
-        Current Project Stack
+        {t('about.currentStack.title')}
       </h2>
       <div className="flex gap-4 justify-around">
         {techStack?.length > 0 &&
@@ -94,20 +96,26 @@ export default function AboutMe() {
       </div>
       <Card className="bg-gradient-to-r from-background/5 to-secondary/5 mt-8 py-8">
         <h2 className="text-xl font-medium text-title text-center">
-          What I bring to the table
+          {t('about.valueProposition.title')}
         </h2>
         <div className="flex flex-col gap-8 pt-6">
           <div className="text-center">
             <h4 className="text-3xl font-medium text-primary">4+</h4>
-            <span className="text-gray-600 text-sm">years of experience</span>
+            <span className="text-gray-600 text-sm">
+              {t('about.valueProposition.experienceSubtitle')}
+            </span>
           </div>
           <div className="text-center">
             <h4 className="text-3xl font-medium text-secondary">Frontend</h4>
-            <span className="text-gray-600 text-sm">specialized focus</span>
+            <span className="text-gray-600 text-sm">
+              {t('about.valueProposition.focusSubtitle')}
+            </span>
           </div>
           <div className="text-center">
             <h4 className="text-3xl font-medium text-primary">UX/UI</h4>
-            <span className="text-gray-600 text-sm">growing expertise</span>
+            <span className="text-gray-600 text-sm">
+              {t('about.valueProposition.extraSubtitle')}
+            </span>
           </div>
         </div>
       </Card>

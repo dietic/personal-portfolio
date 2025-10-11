@@ -13,4 +13,10 @@ interface Skill {
   description: string
 }
 
-export type Level = 'advanced' | 'intermediate' | 'basic'
+export type Level =
+  | 'advanced'
+  | 'intermediate'
+  | 'basic'
+  | 'avanzado'
+  | 'intermedio'
+  | 'basico'
