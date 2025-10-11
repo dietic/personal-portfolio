@@ -17,7 +17,9 @@ export default function ContactMe() {
         <Card className="p-4 mt-4 bg-linear-to-r from-primary/10 to-secondary/10">
           <div className="flex gap-3 items-center">
             <div className="w-3 h-3 rounded-full bg-secondary animate-pulse"></div>
-            <span className="text-title">{t('contact.status.title')}</span>
+            <span className="text-title font-medium">
+              {t('contact.status.title')}
+            </span>
           </div>
           <p className="py-2 text-foreground">{t('contact.status.subtitle')}</p>
         </Card>
