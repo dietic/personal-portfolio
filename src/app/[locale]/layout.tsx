@@ -20,6 +20,9 @@ export default async function RootLayout({
     <NextIntlClientProvider locale={locale}>
       <Navbar />
       {children}
+      <footer className="w-full pb-4 text-center">
+        <span className="text-sm text-title/50">&copy; 2025 DiegoHQ</span>
+      </footer>
     </NextIntlClientProvider>
   )
 }

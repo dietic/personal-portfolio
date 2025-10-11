@@ -34,7 +34,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${rubik.className} antialiased pb-12`}>
+      <body className={`${rubik.className} antialiased`}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
