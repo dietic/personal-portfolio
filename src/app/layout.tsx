@@ -11,7 +11,7 @@ const rubik = Rubik({
 })
 
 export const metadata: Metadata = {
-  title: 'Diego Rios',
+  title: 'Portfolio - Diego Rios',
   description: "Diego Rios's portfolio",
   openGraph: {
     type: 'website',
@@ -34,6 +34,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <link rel="icon" href="/dhq-favicon.png" sizes="any" />
       <body className={`${rubik.className} antialiased`}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>

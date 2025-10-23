@@ -6,7 +6,8 @@ import { Menu } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import logoDark from '../../../../public/logo-3.png'
+import logo from '../../../../public/dhq-logo-purple.png'
+import isotype from '../../../../public/dhq-isotype-purple.png'
 import { NavItem } from './navbar.interface'
 import { Toggle } from '@/components/ui/toggle'
 import { useTheme } from 'next-themes'
@@ -100,14 +101,25 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 w-full flex justify-center z-50">
       <div
         className={cn(
-          'flex w-full max-w-[1400px] justify-between items-center py-4 px-16 md:px-32 bg-transparent relative',
+          'flex w-full max-w-[1400px] justify-between items-center py-4 px-8 sm:px-16 md:px-32 bg-transparent relative',
           scrolled
             ? 'border-b border-border/10 bg-background/50  backdrop-blur-md'
             : 'border-none',
         )}
       >
         <div>
-          <Image src={logoDark} alt="portfolio-logo" width={35} />
+          <Image
+            src={logo}
+            alt="portfolio-logo"
+            height={30}
+            className="hidden md:block min-w-[80px]"
+          />
+          <Image
+            src={isotype}
+            alt="portfolio-logo"
+            height={30}
+            className="md:hidden"
+          />
         </div>
         <div className="flex gap-4">
           {mounted && (
