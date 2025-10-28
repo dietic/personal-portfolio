@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Rubik } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/providers/themeProvider'
+import { Analytics } from '@vercel/analytics/next'
 
 const rubik = Rubik({
   subsets: ['latin'],
@@ -37,6 +38,7 @@ export default async function RootLayout({
       <link rel="icon" href="/dhq-favicon.png" sizes="any" />
       <body className={`${rubik.className} antialiased`}>
         <ThemeProvider>{children}</ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
