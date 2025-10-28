@@ -1,19 +1,19 @@
 'use client'
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Toggle } from '@/components/ui/toggle'
 import { useScrollY } from '@/hooks/useScrollY'
 import { cn } from '@/lib/utils'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu } from 'lucide-react'
+import { useLocale, useTranslations } from 'next-intl'
+import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
-import logo from '../../../../public/dhq-logo-purple.png'
-import isotype from '../../../../public/dhq-isotype-purple.png'
-import { NavItem } from './navbar.interface'
-import { Toggle } from '@/components/ui/toggle'
-import { useTheme } from 'next-themes'
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { useLocale, useTranslations } from 'next-intl'
 import { useRouter } from 'next/navigation'
+import { useEffect, useState } from 'react'
+import isotype from '../../../../public/dhq-isotype-purple.png'
+import logo from '../../../../public/dhq-logo-purple.png'
+import { NavItem } from './navbar.interface'
 
 export default function Navbar() {
   useEffect(() => setMounted(true), [])
@@ -31,7 +31,7 @@ export default function Navbar() {
 
   const locale = useLocale()
   useEffect(() => {
-    console.log('locale', locale)
+    // locale changes handled by Tabs; avoid logging in production
   }, [locale])
   const navItems: NavItem[] = [
     {
@@ -91,7 +91,6 @@ export default function Navbar() {
   }
 
   const handleLocaleChange = (value: string) => {
-    console.log('locale', value)
     router.push(`/${value}`)
   }
 
