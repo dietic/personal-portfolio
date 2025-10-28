@@ -1,7 +1,6 @@
 'use client'
 import LandingSection from '@/components/custom/landingSection.component'
-import { Project } from './projects.interface'
-import Image from 'next/image'
+import { Badge } from '@/components/ui/badge'
 import {
   Carousel,
   CarouselContent,
@@ -9,10 +8,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
-import { Badge } from '@/components/ui/badge'
-import Link from 'next/link'
 import { ExternalLink } from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Project } from './projects.interface'
 
 export default function Projects() {
   const t = useTranslations()
@@ -72,9 +72,7 @@ export default function Projects() {
           projects: (chunk) => <span className="text-primary">{chunk}</span>,
         })}
       </h1>
-      <p>
-        A showcase of my recent work and the technologies I&apos;ve mastered.
-      </p>
+      <p>{t('projects.subtitle')}</p>
       <div className="flex flex-col gap-10 mt-8 px-12">
         {generateProjects(projects)}
       </div>
