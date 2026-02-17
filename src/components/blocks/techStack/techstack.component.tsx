@@ -18,19 +18,19 @@ export default function TechStack() {
         {
           tech: t('techStack.tech.react.label'),
           level: t('techStack.levels.advanced') as Level,
-          exp: t('common.experience.time', { years: 3 }),
+          exp: t('common.experience.time', { years: 5 }),
           description: t('techStack.tech.react.desc'),
         },
         {
           tech: t('techStack.tech.next.label'),
           level: t('techStack.levels.advanced') as Level,
-          exp: t('common.experience.time', { years: 2 }),
+          exp: t('common.experience.time', { years: 3 }),
           description: t('techStack.tech.next.desc'),
         },
         {
           tech: t('techStack.tech.angular.label'),
           level: t('techStack.levels.intermediate') as Level,
-          exp: t('common.experience.time', { years: 2 }),
+          exp: t('common.experience.time', { years: 4 }),
           description: t('techStack.tech.angular.desc'),
         },
         {
@@ -42,7 +42,7 @@ export default function TechStack() {
         {
           tech: t('techStack.tech.javascript.label'),
           level: t('techStack.levels.advanced') as Level,
-          exp: t('common.experience.time', { years: 4 }),
+          exp: t('common.experience.time', { years: 5 }),
           description: t('techStack.tech.javascript.desc'),
         },
       ],
@@ -97,7 +97,7 @@ export default function TechStack() {
           tech: t('techStack.tech.node.label'),
           level: t('techStack.levels.basic') as Level,
           // was "6 months" → normalize to 1+ years
-          exp: t('common.experience.time', { years: 1 }),
+          exp: t('common.experience.time', { years: 3 }),
           description: t('techStack.tech.node.desc'),
         },
         {
@@ -116,7 +116,7 @@ export default function TechStack() {
         {
           tech: t('techStack.tech.git.label'),
           level: t('techStack.levels.advanced') as Level,
-          exp: t('common.experience.time', { years: 3 }),
+          exp: t('common.experience.time', { years: 5 }),
           description: t('techStack.tech.git.desc'),
         },
         {
@@ -128,7 +128,7 @@ export default function TechStack() {
         {
           tech: t('techStack.tech.figma.label'),
           level: t('techStack.levels.intermediate') as Level,
-          exp: t('common.experience.time', { years: 2 }),
+          exp: t('common.experience.time', { years: 3 }),
           description: t('techStack.tech.figma.desc'),
         },
         {

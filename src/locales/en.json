@@ -139,7 +139,7 @@
         "id": "personal-cfo",
         "name": "Personal CFO",
         "description": "Personal CFO is a web app that uses AI to extract and categorize bank transactions with a keyword-based system, giving users clear insights into their spending through smart analytics.",
-        "technologies": ["nextJS", "tailwind", "python", "AWS", "vercel"],
+        "technologies": ["nextJS", "tailwind", "vercel", "supabase", "postgresql"],
         "imgs": ["landing", "login", "dashboard", "analytics"],
         "url": "https://personal-cfo.io"
       }

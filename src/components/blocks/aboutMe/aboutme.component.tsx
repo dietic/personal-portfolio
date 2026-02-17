@@ -8,10 +8,10 @@ import { useTranslations } from 'next-intl'
 export default function AboutMe() {
   const techStack: TechStack[] = [
     {
-      id: 'angular',
-      label: 'Angular',
-      alt: 'angular-icon',
-      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg',
+      id: 'react',
+      label: 'React',
+      alt: 'react-icon',
+      src: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
     },
     {
       id: 'tailwind',
@@ -100,7 +100,7 @@ export default function AboutMe() {
         </h2>
         <div className="flex flex-col gap-8 pt-6">
           <div className="text-center">
-            <h4 className="text-3xl font-medium text-primary">4+</h4>
+            <h4 className="text-3xl font-medium text-primary">5+</h4>
             <span className="text-gray-600 text-sm">
               {t('about.valueProposition.experienceSubtitle')}
             </span>
